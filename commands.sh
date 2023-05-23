@@ -96,6 +96,10 @@ yum install php56-php-fpm
 
 systemctl start php56-php-fpm
 
+
+yum install php56-php-xcache.x86_64
+yum install php56-xcache-admin.noarch​
+
 vim /opt/remi/php56/root/etc/php.ini
 extension=xcache.so
 
@@ -161,6 +165,8 @@ nginx -t
 nginx -s reload
 systemctl restart nginx
 
+
+NOTE : please make sure that you make necessary changes in /etc/hosts and /etc/host.conf file before accessing the websites
 
 
 
